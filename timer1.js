@@ -1,10 +1,11 @@
 const timer = (input) => {
   input = process.argv.slice(2);
-  // skip through NaN and negative number
+  // if no input, ends the function
   if (input.length === 0) return;
   input.sort((a,b) => a - b);
 
   for (const item of input) {
+    // skip through NaN and negative number
     if (isNaN(item) || item < 0) continue;
     else {
       setTimeout(() => {
